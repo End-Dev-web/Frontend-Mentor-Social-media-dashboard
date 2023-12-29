@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+:root {
+  &[data-theme="light"] {
+    color-scheme: light;
+    @each $name, $color in $light {
+      @each $shade-color, $value in $color {
+        --#{$name}-#{$shade-color}: #{$value};
+        --switch-circle: 25px;
+        --name-mode: "light mode";
+        --hover-bg: hsl(227deg 22.88% 88.96%);
+      }
+    }
+  }
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+    @each $name, $color in $dark {
+      @each $shade-color, $value in $color {
+        --#{$name}-#{$shade-color}: #{$value};
+        --switch-circle: 5px;
+        --name-mode: "dark mode";
+        --hover-bg: hsl(232deg 19.66% 25.13%);
+      }
+    }
+  }
+}

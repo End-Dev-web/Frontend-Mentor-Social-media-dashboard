@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+.heading-1 {
+  @include heading($font-size-700);
+  line-height: 1.5;
+}
+.heading-2 {
+  @include heading($font-size-600);
+  color: var(--primary-soft-orange);
+  line-height: 1.2;
+}
+.heading-3 {
+  @include heading($font-size-600);
+  color: var(--neutral-off-white);
+  font-weight: 500;
+  line-height: 2;
+  transition: 0.5s;
+  &:hover {
+    color: var(--primary-soft-orange);
+  }
+}

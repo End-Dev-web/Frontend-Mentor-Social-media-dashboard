@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+@use "./font-face" as *;
+/*------------------GENERAL--------------------*/
+
+body {
+  font-family: $font-family-base;
+  color: var(--neutral-color);
+  background-color: var(--neutral-bg-color);
+  // overflow-x: hidden;
+}
+
+* {
+  font-family: "Inter";
+}

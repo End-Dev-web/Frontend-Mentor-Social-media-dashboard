@@ -1,0 +1,62 @@
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+$facebook-clr: hsl(208, 92%, 53%);
+$twitter-clr: hsl(203, 89%, 53%);
+$instagram-clr: linear-gradient(
+  to right,
+  hsl(37, 97%, 70%),
+  hsl(329, 70%, 58%)
+);
+$youtube-clr: hsl(348, 97%, 39%);
+$white: hsl(0, 0%, 100%);
+$very-dark-blue: hsl(230, 17%, 14%);
+$pattern-bg-dark: hsl(232, 19%, 15%);
+$pattern-bg-light: hsl(225, 100%, 98%);
+$card-bg-dark: hsl(228, 28%, 20%);
+$card-bg-light: hsl(227, 47%, 96%);
+$text-clr-dark: hsl(228, 34%, 66%);
+$text-clr-light: hsl(228, 12%, 44%);
+$toggle-clr-dark: linear-gradient(
+  to right,
+  hsl(210, 78%, 56%),
+  hsl(146, 68%, 55%)
+);
+$toggle-clr-light: hsl(230, 22%, 74%);
+
+$light: (
+  "primary": (
+    "lime-green": $lime-green,
+    "bright-red": $bright-red,
+    "facebook-clr": $facebook-clr,
+    "twitter-clr": $twitter-clr,
+    "instargam-clr": $instagram-clr,
+    "youtube-clr": $youtube-clr,
+  ),
+  "neutral": (
+    "bg-color": $white,
+    "color": $very-dark-blue,
+    "pattern-bg": $pattern-bg-light,
+    "card-bg": $card-bg-light,
+    "text-clr": $text-clr-light,
+    "toggle-clr": $toggle-clr-light,
+  ),
+);
+
+$dark: (
+  "primary": (
+    "lime-green": $lime-green,
+    "bright-red": $bright-red,
+    "facebook-clr": $facebook-clr,
+    "twitter-clr": $twitter-clr,
+    "instargam-clr": $instagram-clr,
+    "youtube-clr": $youtube-clr,
+  ),
+  "neutral": (
+    "bg-color": $very-dark-blue,
+    "color": $white,
+    "pattern-bg": $pattern-bg-dark,
+    "card-bg": $card-bg-dark,
+    "text-clr": $text-clr-dark,
+    "toggle-clr": $toggle-clr-dark,
+  ),
+);

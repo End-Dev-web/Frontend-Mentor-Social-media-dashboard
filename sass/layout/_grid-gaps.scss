@@ -1,0 +1,14 @@
+$grid-gaps: (
+  "0": 0,
+  "1": 10px,
+  "2": 20px,
+  "3": 30px,
+);
+
+// grid gaps
+@each $key, $val in $grid-gaps {
+  .gap-#{$key} {
+    gap: $val;
+    // margin-inline: -$val;
+  }
+}

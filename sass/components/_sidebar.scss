@@ -1,0 +1,93 @@
+@use "../abstracts/" as *;
+
+header {
+  position: relative;
+  z-index: 3;
+  @include mq(md) {
+    .container > div {
+      padding-block-start: $size-11;
+    }
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    background: white;
+    min-height: 100vh;
+    max-width: 318px;
+    width: 100%;
+    transform: translateX(250%);
+    transition: 0.5s;
+    @include mq(md) {
+      position: relative;
+      background-color: transparent;
+      min-height: 0;
+      max-width: 100%;
+      transform: translateX(0);
+    }
+    a {
+      font-size: var(--fs-600);
+      transition: 0.5s;
+      &:hover {
+        color: var(--primary-soft-red);
+      }
+    }
+  }
+  button {
+    margin-inline-start: auto;
+    position: relative;
+    z-index: 2;
+    @include mq(md) {
+      display: none;
+    }
+  }
+  .menu-btn .open,
+  .menu-btn[aria-expanded="true"] .close {
+    display: block;
+  }
+  .menu-btn .close,
+  .menu-btn[aria-expanded="true"] .open {
+    display: none;
+  }
+  .sidebar[data-state="opened"] {
+    animation: transformOpen 0.5s ease-in-out forwards;
+    visibility: visible;
+    // display: block;
+  }
+  .sidebar[data-state="slosed"] {
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
+  }
+  .sidebar[data-state="closing"] {
+    animation: transformClose 0.5s ease-in-out forwards;
+  }
+
+  @keyframes transformOpen {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-82%);
+    }
+  }
+
+  @keyframes transformClose {
+    0% {
+      transform: translateX(-82%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

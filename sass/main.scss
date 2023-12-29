@@ -1,0 +1,31 @@
+@use "./base";
+@use "./themes";
+@use "./components";
+@use "./layout";
+@use "./utilities";
+@use "./abstracts/" as *;
+
+main {
+  section > div {
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+  }
+  p,
+  span {
+    font-weight: var(--fw-bold);
+  }
+  .theme {
+    width: 100%;
+    @include mq(md) {
+      width: inherit;
+      gap: 20px;
+    }
+  }
+  .bg-patter {
+    padding-block-end: 8rem;
+  }
+  .position-top {
+    position: relative;
+    top: -92px;
+  }
+}
